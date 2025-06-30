@@ -1,0 +1,301 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hasna\\source\\repos\\SMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\controllers\\clerkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\controllers\\clerkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\admin\\systemhealth.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\admin\\systemhealth.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\admin\\viewreports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\admin\\viewreports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\admin\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\admin\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\admin\\teachers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\admin\\teachers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\admin\\addteacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\admin\\addteacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\admin\\allstudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\admin\\allstudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\admin\\addnewstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\admin\\addnewstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|c:\\users\\hasna\\source\\repos\\sms\\sms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C0BBBE-3C9A-4248-8B79-98E42BE27B3C}|SMS\\SMS.csproj|solutionrelative:sms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClerkController.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\ClerkController.cs",
+              "RelativeDocumentMoniker": "SMS\\Controllers\\ClerkController.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\ClerkController.cs",
+              "RelativeToolTip": "SMS\\Controllers\\ClerkController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:30:29.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "SMS\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "SMS\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:30:21.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SystemHealth.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\SystemHealth.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Admin\\SystemHealth.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\SystemHealth.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Admin\\SystemHealth.cshtml",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAJMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T19:13:50.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ViewReports.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\ViewReports.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Admin\\ViewReports.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\ViewReports.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Admin\\ViewReports.cshtml",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAYwFUBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T18:57:10.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Events.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\Events.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Admin\\Events.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\Events.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Admin\\Events.cshtml",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAQwFYBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T18:56:48.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Teachers.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\Teachers.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Admin\\Teachers.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\Teachers.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Admin\\Teachers.cshtml",
+              "ViewState": "AgIAAKwBAAAAAAAAAAAUwLwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T18:52:38.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAJUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T18:47:35.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "SMS\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Models\\UserModel.cs",
+              "RelativeToolTip": "SMS\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T18:45:56.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddTeacher.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\AddTeacher.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Admin\\AddTeacher.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\AddTeacher.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Admin\\AddTeacher.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T01:06:14.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AllStudents.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\AllStudents.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Admin\\AllStudents.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\AllStudents.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Admin\\AllStudents.cshtml",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAANMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T01:03:58.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AddNewStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\AddNewStudent.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Admin\\AddNewStudent.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\AddNewStudent.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Admin\\AddNewStudent.cshtml",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAHMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T00:59:37.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "SMS\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "SMS\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAAEkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T20:28:27.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAEBAAAAAAAAAAAAAAsBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T20:04:02.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "SMS\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "SMS\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T19:52:23.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SMS\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SMS\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T19:14:46.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "SMS\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "SMS\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAYwHsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T18:08:50.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Program.cs",
+              "RelativeDocumentMoniker": "SMS\\Program.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\SMS\\SMS\\Program.cs",
+              "RelativeToolTip": "SMS\\Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T02:00:31.098Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

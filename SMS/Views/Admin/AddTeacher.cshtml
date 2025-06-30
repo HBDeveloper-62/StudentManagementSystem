@@ -1,0 +1,329 @@
+﻿@model SMS.Models.Teacher
+@{
+    ViewData["Title"] = "Add Teacher";
+}
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+<!-- Animate.css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+
+<style>
+    :root {
+        --primary-color: #6c5ce7;
+        --secondary-color: #00cec9;
+        --dark-color: #2d3436;
+        --light-color: #f8f9fa;
+        --success-color: #00b894;
+        --warning-color: #fdcb6e;
+        --danger-color: #ff7675;
+    }
+
+    body {
+        background-color: #f5f7fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .teacher-form-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .form-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 1.5rem;
+        border-radius: 12px 12px 0 0;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+        .form-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(30deg);
+        }
+
+        .form-header h2 {
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .form-header h2 i {
+                margin-right: 15px;
+                font-size: 1.5em;
+            }
+
+    .form-card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: var(--dark-color);
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+        .form-label i {
+            margin-right: 8px;
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
+
+    .form-control {
+        border-radius: 8px;
+        padding: 12px 15px;
+        border: 1px solid #e0e0e0;
+        transition: all 0.3s;
+        margin-bottom: 5px;
+    }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(108, 92, 231, 0.25);
+        }
+
+    .input-group-text {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+    }
+
+    .btn-submit {
+        background-color: var(--success-color);
+        border: none;
+        padding: 12px 30px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: all 0.3s;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+        .btn-submit:hover {
+            background-color: #00997b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.4);
+        }
+
+        .btn-submit i {
+            margin-right: 8px;
+        }
+
+    .btn-cancel {
+        background-color: #dfe6e9;
+        color: var(--dark-color);
+        border: none;
+        padding: 12px 30px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: all 0.3s;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+        .btn-cancel:hover {
+            background-color: #b2bec3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(178, 190, 195, 0.4);
+        }
+
+        .btn-cancel i {
+            margin-right: 8px;
+        }
+
+    .form-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-top: 2rem;
+    }
+
+    .animate-input {
+        transition: all 0.3s ease;
+    }
+
+        .animate-input:focus {
+            transform: translateY(-2px);
+        }
+
+    .select-dropdown {
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 1em;
+    }
+
+    .validation-message {
+        font-size: 0.85rem;
+        height: 20px;
+    }
+</style>
+
+<div class="teacher-form-container animate__animated animate__fadeIn">
+    <div class="form-header">
+        <h2><i class="fas fa-chalkboard-teacher"></i> Teacher Registration</h2>
+    </div>
+
+    <div class="form-card">
+        <form asp-action="AddTeacher" method="post" class="needs-validation" novalidate>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4"></div>
+
+            <div class="row">
+                <!-- Personal Information -->
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Name" class="form-label"><i class="fas fa-user"></i> Full Name</label>
+                    <input asp-for="Name" class="form-control animate-input" placeholder="Enter teacher's full name" required />
+                    <span asp-validation-for="Name" class="text-danger validation-message"></span>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Subject" class="form-label"><i class="fas fa-book"></i> Subject</label>
+                    <input asp-for="Subject" class="form-control animate-input" placeholder="Enter subject" required />
+                    <span asp-validation-for="Subject" class="text-danger validation-message"></span>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+                    <input asp-for="Email" type="email" class="form-control animate-input" placeholder="teacher@school.edu" />
+                    <span asp-validation-for="Email" class="text-danger validation-message"></span>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Phone" class="form-label"><i class="fas fa-phone"></i> Phone</label>
+                    <div class="input-group">
+                        <span class="input-group-text">+92</span>
+                        <input asp-for="Phone" class="form-control animate-input" placeholder="3XX XXXXXXX" />
+                    </div>
+                    <span asp-validation-for="Phone" class="text-danger validation-message"></span>
+                </div>
+
+                <!-- Identification -->
+                <div class="col-md-6 mb-4">
+                    <label asp-for="CNIC" class="form-label"><i class="fas fa-id-card"></i> CNIC</label>
+                    <input asp-for="CNIC" class="form-control animate-input" placeholder="XXXXX-XXXXXXX-X" />
+                    <span asp-validation-for="CNIC" class="text-danger validation-message"></span>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Address" class="form-label"><i class="fas fa-map-marker-alt"></i> Address</label>
+                    <input asp-for="Address" class="form-control animate-input" placeholder="Enter full address" />
+                    <span asp-validation-for="Address" class="text-danger validation-message"></span>
+                </div>
+
+                <!-- Financial Information -->
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Salary" class="form-label"><i class="fas fa-money-bill-wave"></i> Salary</label>
+                    <div class="input-group">
+                        <span class="input-group-text">Rs.</span>
+                        <input asp-for="Salary" class="form-control animate-input" placeholder="Enter monthly salary" />
+                    </div>
+                    <span asp-validation-for="Salary" class="text-danger validation-message"></span>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <label asp-for="AccountNumber" class="form-label"><i class="fas fa-university"></i> Account Number</label>
+                    <input asp-for="AccountNumber" class="form-control animate-input" placeholder="Bank account number" />
+                    <span asp-validation-for="AccountNumber" class="text-danger validation-message"></span>
+                </div>
+
+                <!-- Assignment -->
+                <div class="col-md-6 mb-4">
+                    <label asp-for="ClassAssigned" class="form-label"><i class="fas fa-users-class"></i> Assigned Class</label>
+                    <select asp-for="ClassAssigned" class="form-control animate-input select-dropdown">
+                        <option value="">Select Class</option>
+                        <option value="Class 1">Class 1</option>
+                        <option value="Class 2">Class 2</option>
+                        <option value="Class 3">Class 3</option>
+                        <option value="Class 4">Class 4</option>
+                        <option value="Class 5">Class 5</option>
+                        <option value="Class 6">Class 6</option>
+                        <option value="Class 7">Class 7</option>
+                        <option value="Class 8">Class 8</option>
+                        <option value="Class 9">Class 9</option>
+                        <option value="Class 10">Class 10</option>
+                    </select>
+                    <span asp-validation-for="ClassAssigned" class="text-danger validation-message"></span>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <a asp-action="Teachers" class="btn btn-cancel animate__animated animate__fadeInLeft">
+                    <i class="fas fa-times"></i> Cancel
+                </a>
+                <button type="submit" class="btn btn-submit animate__animated animate__fadeInRight">
+                    <i class="fas fa-save"></i> Register Teacher
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Add animation to form elements on focus
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.classList.add('animate__animated', 'animate__pulse');
+            });
+            input.addEventListener('blur', function() {
+                this.classList.remove('animate__animated', 'animate__pulse');
+            });
+        });
+
+        // Form submission animation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const submitBtn = document.querySelector('.btn-submit');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Processing...';
+            submitBtn.disabled = true;
+        });
+
+        // Format CNIC input
+        const cnicInput = document.querySelector('input[name="CNIC"]');
+        if (cnicInput) {
+            cnicInput.addEventListener('input', function(e) {
+                let value = this.value.replace(/\D/g, '');
+                if (value.length > 5) {
+                    value = value.substring(0, 5) + '-' + value.substring(5);
+                }
+                if (value.length > 13) {
+                    value = value.substring(0, 13) + '-' + value.substring(13);
+                }
+                this.value = value.substring(0, 15);
+            });
+        }
+
+        // Format phone input
+        const phoneInput = document.querySelector('input[name="Phone"]');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function(e) {
+                this.value = this.value.replace(/\D/g, '').substring(0, 10);
+            });
+        }
+    </script>
+}

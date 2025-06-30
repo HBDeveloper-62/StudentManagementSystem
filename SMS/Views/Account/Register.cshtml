@@ -1,0 +1,127 @@
+﻿@model SMS.Models.UserModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Register";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: url('/Images/loginbg.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .register-box {
+            max-width: 500px;
+            margin: 60px auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 35px;
+            border-radius: 12px;
+            color: white;
+        }
+
+            .register-box h2 {
+                text-align: center;
+                margin-bottom: 25px;
+                color: red;
+            }
+
+        .form-control {
+            background-color: black;
+            border: none;
+            color: white;
+        }
+
+            .form-control::placeholder {
+                color: rgba(255,255,255,0.7);
+            }
+
+        .btn-register {
+            width: 100%;
+            background-color: #00c9a7;
+            border: none;
+        }
+
+            .btn-register:hover {
+                background-color: #00a88a;
+            }
+
+        select.form-control {
+            color: white;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+            .login-link a {
+                color: #00c9a7;
+                text-decoration: none;
+            }
+
+                .login-link a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="register-box">
+        <h2>Create Account</h2>
+        <form asp-action="Register" method="post">
+            <div class="mb-3">
+                <input asp-for="FullName" type="text" class="form-control" placeholder="Full Name" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+
+            </div>
+            <div class="mb-3">
+                <input asp-for="Email" type="email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    <select asp-for="CountryCode" class="form-control">
+                        <option value="+92">🇵🇰 +92</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+61">🇦🇺 +61</option>
+                    </select>
+                </div>
+                <div class="col-8">
+                    <input asp-for="ContactNumber" class="form-control" placeholder="Contact Number" />
+                </div>
+                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <select asp-for="Role" class="form-control">
+                    <option>Admin</option>
+                    <option>Clerk</option>
+                    <option>Student</option>
+                    <option>Parent</option>
+                    <option>Principal</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-register">Register</button>
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="/Account/Login">Login</a>
+        </div>
+    </div>
+</body>
+</html>

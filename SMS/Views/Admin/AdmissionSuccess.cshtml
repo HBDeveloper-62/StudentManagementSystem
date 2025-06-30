@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Admission Success";
+    var countdown = ViewBag.Countdown ?? 5;
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <div class="text-center">
+        <div class="alert alert-success animate__animated animate__zoomIn p-4 rounded shadow">
+            <h3 class="mb-3">@ViewBag.Message</h3>
+            <p>Redirecting to Admin Dashboard in <span id="countdown">@countdown</span> seconds...</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let seconds = parseInt(document.getElementById("countdown").textContent);
+    const interval = setInterval(() => {
+        seconds--;
+        document.getElementById("countdown").textContent = seconds;
+        if (seconds <= 0) {
+            clearInterval(interval);
+            window.location.href = '@Url.Action("Dashboard", "Admin")';
+        }
+    }, 1000);
+</script>

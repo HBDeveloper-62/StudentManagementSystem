@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Backup & Security";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Backup & Security</h2>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">Manual Backup</div>
+                <div class="card-body">
+                    <p>Click below to generate a full system backup.</p>
+                    <a href="@Url.Action("GenerateBackup", "Admin")" class="btn btn-success">Download Backup</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">Reset System</div>
+                <div class="card-body">
+                    <p><strong>Warning:</strong> This will reset the database.</p>
+                    <a href="@Url.Action("ResetSystem", "Admin")" class="btn btn-danger">Reset Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

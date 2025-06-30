@@ -1,0 +1,404 @@
+﻿@{
+    ViewData["Title"] = "System Health & Notifications";
+}
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+<!-- Animate.css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+
+<style>
+    :root {
+        --primary-color: #6c5ce7;
+        --secondary-color: #00cec9;
+        --dark-color: #2d3436;
+        --light-color: #f8f9fa;
+        --success-color: #00b894;
+        --warning-color: #fdcb6e;
+        --danger-color: #ff7675;
+        --info-color: #0984e3;
+    }
+
+    body {
+        background-color: #f5f7fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .page-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(30deg);
+        }
+
+        .page-header h2 {
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .page-header h2 i {
+                margin-right: 15px;
+                font-size: 1.5em;
+            }
+
+    .status-card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+    }
+
+        .status-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+    .status-indicator {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .status-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 1.5rem;
+    }
+
+    .status-success {
+        background-color: rgba(0, 184, 148, 0.1);
+        color: var(--success-color);
+    }
+
+    .status-warning {
+        background-color: rgba(253, 203, 110, 0.1);
+        color: var(--warning-color);
+    }
+
+    .status-danger {
+        background-color: rgba(255, 118, 117, 0.1);
+        color: var(--danger-color);
+    }
+
+    .status-info {
+        background-color: rgba(9, 132, 227, 0.1);
+        color: var(--info-color);
+    }
+
+    .notification-card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+
+    .notification-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 1rem 1.5rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+    }
+
+        .notification-header i {
+            margin-right: 10px;
+        }
+
+    .notification-item {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #e9ecef;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease;
+    }
+
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+
+        .notification-item:hover {
+            background-color: rgba(108, 92, 231, 0.05);
+        }
+
+    .notification-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 1rem;
+    }
+
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .metric-card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+        .metric-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+    .metric-value {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0.5rem 0;
+        color: var(--primary-color);
+    }
+
+    .metric-label {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    .refresh-btn {
+        background-color: var(--primary-color);
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        transition: all 0.3s;
+    }
+
+        .refresh-btn:hover {
+            background-color: #5649c0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        .refresh-btn i {
+            margin-right: 8px;
+        }
+</style>
+
+<div class="container py-4">
+    <div class="page-header animate__animated animate__fadeIn">
+        <h2><i class="fas fa-heartbeat"></i> System Health & Notifications</h2>
+    </div>
+
+    <!-- System Status Card -->
+    <div class="status-card animate__animated animate__fadeIn">
+        <div class="status-indicator">
+            <div class="status-icon status-success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div>
+                <h4 class="mb-1">System Status</h4>
+                <p class="mb-0 text-muted">Last updated: @DateTime.Now.ToString("MMMM dd, yyyy h:mm tt")</p>
+            </div>
+            <button class="refresh-btn">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+        </div>
+        <div class="alert alert-success" style="border-radius: 8px; border-left: 4px solid var(--success-color);">
+            <i class="fas fa-check-circle me-2"></i> <strong>All systems operational</strong> - No issues detected
+        </div>
+    </div>
+
+    <!-- System Metrics -->
+    <div class="metrics-grid animate__animated animate__fadeIn">
+        <div class="metric-card">
+            <i class="fas fa-users text-primary mb-2"></i>
+            <div class="metric-value">1,248</div>
+            <div class="metric-label">Active Users</div>
+        </div>
+        <div class="metric-card">
+            <i class="fas fa-database text-primary mb-2"></i>
+            <div class="metric-value">78%</div>
+            <div class="metric-label">Storage Used</div>
+        </div>
+        <div class="metric-card">
+            <i class="fas fa-tasks text-primary mb-2"></i>
+            <div class="metric-value">24</div>
+            <div class="metric-label">Pending Tasks</div>
+        </div>
+        <div class="metric-card">
+            <i class="fas fa-shield-alt text-primary mb-2"></i>
+            <div class="metric-value">100%</div>
+            <div class="metric-label">Security Status</div>
+        </div>
+    </div>
+
+    <!-- Notifications Card -->
+    <div class="notification-card animate__animated animate__fadeIn">
+        <div class="notification-header">
+            <i class="fas fa-bell"></i>
+            <span>Recent Notifications</span>
+        </div>
+        <div class="notification-list">
+            <div class="notification-item">
+                <div class="notification-icon status-success">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div>
+                    <strong>Backup Completed</strong>
+                    <p class="mb-0 text-muted">Latest system backup was completed successfully at @DateTime.Now.AddHours(-2).ToString("h:mm tt")</p>
+                </div>
+                <span class="text-muted ms-auto" style="font-size: 0.8rem;">2 hours ago</span>
+            </div>
+            <div class="notification-item">
+                <div class="notification-icon status-info">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div>
+                    <strong>Login Logs Available</strong>
+                    <p class="mb-0 text-muted">User login logs for May are now available for review</p>
+                </div>
+                <span class="text-muted ms-auto" style="font-size: 0.8rem;">1 day ago</span>
+            </div>
+            <div class="notification-item">
+                <div class="notification-icon status-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div>
+                    <strong>Maintenance Scheduled</strong>
+                    <p class="mb-0 text-muted">System maintenance scheduled for June 15, 2:00 AM - 4:00 AM</p>
+                </div>
+                <span class="text-muted ms-auto" style="font-size: 0.8rem;">3 days ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Components Status -->
+    <div class="status-card animate__animated animate__fadeIn">
+        <h4 class="mb-4"><i class="fas fa-server me-2"></i>Component Status</h4>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="d-flex align-items-center p-3 bg-light rounded">
+                    <div class="status-icon status-success me-3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0">Database Server</h6>
+                        <small class="text-muted">Response time: 28ms</small>
+                    </div>
+                    <span class="badge bg-success ms-auto">Operational</span>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="d-flex align-items-center p-3 bg-light rounded">
+                    <div class="status-icon status-success me-3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0">Application Server</h6>
+                        <small class="text-muted">Uptime: 99.98%</small>
+                    </div>
+                    <span class="badge bg-success ms-auto">Operational</span>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="d-flex align-items-center p-3 bg-light rounded">
+                    <div class="status-icon status-success me-3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0">Authentication Service</h6>
+                        <small class="text-muted">Last activity: @DateTime.Now.ToString("h:mm tt")</small>
+                    </div>
+                    <span class="badge bg-success ms-auto">Operational</span>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="d-flex align-items-center p-3 bg-light rounded">
+                    <div class="status-icon status-warning me-3">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0">Email Service</h6>
+                        <small class="text-muted">Queue: 12 pending</small>
+                    </div>
+                    <span class="badge bg-warning ms-auto">Degraded</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Refresh button functionality
+        document.querySelector('.refresh-btn').addEventListener('click', function() {
+            const btn = this;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Refreshing...';
+            btn.disabled = true;
+
+            // Simulate refresh delay
+            setTimeout(function() {
+                btn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh';
+                btn.disabled = false;
+
+                // Show refresh notification
+                const toast = document.createElement('div');
+                toast.className = 'alert alert-success animate__animated animate__fadeInUp';
+                toast.style.position = 'fixed';
+                toast.style.bottom = '20px';
+                toast.style.right = '20px';
+                toast.style.zIndex = '1000';
+                toast.style.borderRadius = '8px';
+                toast.innerHTML = '<i class="fas fa-check-circle me-2"></i> System status refreshed successfully';
+                document.body.appendChild(toast);
+
+                setTimeout(function() {
+                    toast.classList.add('animate__fadeOut');
+                    setTimeout(function() {
+                        toast.remove();
+                    }, 300);
+                }, 3000);
+            }, 1500);
+        });
+
+        // Add animation to notification items
+        document.querySelectorAll('.notification-item').forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+            item.classList.add('animate__animated', 'animate__fadeIn');
+        });
+    </script>
+}

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Record Attendance & Data";
+    Layout = "~/Views/Shared/_ClerkLayout.cshtml";
+}
+
+<div class="container py-4">
+    <h3 class="mb-3">@ViewData["Title"]</h3>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <form asp-action="RecordDataPost" method="post">
+        <div class="mb-3">
+            <label for="recordDetails" class="form-label">Enter data details</label>
+            <textarea class="form-control" id="recordDetails" name="recordDetails" rows="4" placeholder="e.g. attendance stats, remarks" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Record</button>
+        <a asp-controller="Clerk" asp-action="Dashboard" class="btn btn-secondary">Back to Dashboard</a>
+
+    </form>
+</div>

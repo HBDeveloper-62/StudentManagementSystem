@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewBag.Title = "Submit Assignments";
+}
+
+<div class="container my-5">
+    <div class="card shadow p-4">
+        <h2 class="mb-4 text-success"><i class="bi bi-file-earmark-arrow-up-fill me-2"></i> Submit Assignments</h2>
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-success">@ViewBag.Message</div>
+        }
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+
+        <form asp-action="SubmitAssignments" method="post" enctype="multipart/form-data" class="mb-3">
+            <div class="mb-3">
+                <label for="assignmentFile" class="form-label">Choose Assignment File</label>
+                <input type="file" class="form-control" id="assignmentFile" name="assignmentFile" required />
+            </div>
+            <button type="submit" class="btn btn-success"><i class="bi bi-upload"></i> Upload</button>
+        </form>
+
+        <div class="d-flex justify-content-end mt-4">
+            <a href="/Student/Dashboard" class="btn btn-outline-success">
+                <i class="bi bi-arrow-left-circle me-1"></i> Back to Dashboard
+            </a>
+        </div>
+    </div>
+</div>

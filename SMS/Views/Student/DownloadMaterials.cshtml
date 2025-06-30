@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewBag.Title = "Download Materials";
+}
+
+<div class="container my-5">
+    <div class="card shadow p-4">
+        <h2 class="mb-4 text-secondary"><i class="bi bi-cloud-arrow-down-fill me-2"></i>Download Syllabus & Notes</h2>
+
+        <p>Access your study materials below. Click to download the files.</p>
+
+        <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Mathematics Syllabus.pdf
+                <a href="/files/syllabus_math.pdf" class="btn btn-sm btn-outline-secondary" target="_blank">
+                    <i class="bi bi-download"></i> Download
+                </a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Physics Notes.pdf
+                <a href="/files/notes_physics.pdf" class="btn btn-sm btn-outline-secondary" target="_blank">
+                    <i class="bi bi-download"></i> Download
+                </a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                English Grammar Notes.pdf
+                <a href="/files/notes_english.pdf" class="btn btn-sm btn-outline-secondary" target="_blank">
+                    <i class="bi bi-download"></i> Download
+                </a>
+            </li>
+        </ul>
+
+        <div class="d-flex justify-content-end mt-4">
+            <a href="/Student/Dashboard" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left-circle me-1"></i> Back to Dashboard
+            </a>
+        </div>
+    </div>
+</div>

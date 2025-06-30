@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Fee Details";
+    Layout = "~/Views/Shared/_ClerkLayout.cshtml";
+}
+<div class="container mt-4">
+    <h3>💰 Fee Details - @ViewData["Status"]</h3>
+    <a asp-controller="Clerk" asp-action="Dashboard" class="btn btn-secondary">Back to Dashboard</a>
+
+
+    <!-- Replace this table with actual data -->
+    <table class="table table-striped">
+        <thead class="table-primary">
+            <tr>
+                <th>Student</th>
+                <th>Class</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fatima Zahra</td>
+                <td>5th</td>
+                <td>Rs. 3500</td>
+                <td>@ViewData["Status"]</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

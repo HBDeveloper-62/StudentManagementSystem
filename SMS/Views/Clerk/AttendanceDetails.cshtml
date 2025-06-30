@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Attendance Details";
+    Layout = "~/Views/Shared/_ClerkLayout.cshtml";
+}
+<div class="container mt-4">
+    <h3>📋 Attendance Details - @ViewData["Status"]</h3>
+    <a asp-controller="Clerk" asp-action="Dashboard" class="btn btn-secondary">Back to Dashboard</a>
+
+
+    <!-- Replace this table with actual data -->
+    <table class="table table-bordered mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Student</th>
+                <th>Class</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ali Khan</td>
+                <td>3rd</td>
+                <td>@ViewData["Status"]</td>
+                <td>2025-06-01</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

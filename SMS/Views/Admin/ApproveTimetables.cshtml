@@ -1,0 +1,37 @@
+﻿@model List<SMS.Models.Timetable>
+
+@{
+    ViewData["Title"] = "Approve Timetables";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Approve or Reject Timetables</h2>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Class</th>
+                <th>Submitted On</th>
+                <th>Status</th>
+                <th>Approve</th>
+                <th>Reject</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ClassName</td>
+                    <td>@item.SubmittedDate.ToShortDateString()</td>
+                    <td>@item.Status</td>
+                    <td>
+                        <a href="@Url.Action("ApproveTimetable", "Admin", new { id = item.Id })" class="btn btn-success btn-sm">Approve</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("RejectTimetable", "Admin", new { id = item.Id })" class="btn btn-danger btn-sm">Reject</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

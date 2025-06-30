@@ -1,0 +1,163 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var currentHour = DateTime.Now.Hour;
+    string greetingMessage = currentHour switch
+    {
+        >= 5 and < 12 => "🌞 Good Morning",
+        >= 12 and < 17 => "☀️ Good Afternoon",
+        >= 17 and < 21 => "🌙 Good Evening",
+        _ => "🌃 Good Night"
+    };
+
+    var userName = HttpContextAccessor.HttpContext.Session.GetString("UserName") ?? "Clerk";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Clerk Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        #sidebar {
+            min-height: 100vh;
+            background-color: #b71c1c; /* strong red */
+            color: white;
+            padding-top: 20px;
+            width: 260px;
+        }
+
+            #sidebar .nav-link {
+                color: white;
+                font-weight: 500;
+                transition: background-color 0.3s ease;
+            }
+
+                #sidebar .nav-link:hover,
+                #sidebar .nav-link.active {
+                    background-color: #0d6efd;
+                    color: white;
+                    border-radius: 5px;
+                }
+
+        .btn-blue-sky {
+            background-color: #0dcaf0;
+            color: #000;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-blue-sky:hover {
+                background-color: #0bb9d9;
+                color: white;
+            }
+
+        .custom-header {
+            height: 60px;
+            background-image: url('/Images/header.jpg');
+            background-size: cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+
+        .custom-footer {
+            height: 40px;
+            background-color: #212529;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            padding: 20px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="flex-shrink-0">
+            <h4 class="text-center mb-4 fw-bold">Clerk Panel</h4>
+            <ul class="nav nav-pills flex-column mb-auto px-3">
+                <li class="nav-item mb-1">
+                    <a href="@Url.Action("Index", "Clerk")" class="nav-link @((ViewContext.RouteData.Values["action"]?.ToString() == "Index") ? "active" : "")">
+                        <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                    </a>
+                </li>
+                <li><hr class="text-white" /></li>
+                <li class="nav-item mb-1">
+                    <a href="@Url.Action("UploadSyllabus", "Clerk")" class="nav-link @((ViewContext.RouteData.Values["action"]?.ToString() == "UploadSyllabus") ? "active" : "")">
+                        <i class="bi bi-journal-bookmark me-2"></i> Upload Syllabus
+                    </a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="@Url.Action("UploadExamDateSheets", "Clerk")" class="nav-link @((ViewContext.RouteData.Values["action"]?.ToString() == "UploadExamDateSheets") ? "active" : "")">
+                        <i class="bi bi-calendar-event me-2"></i> Upload Exam Date Sheets
+                    </a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="@Url.Action("UploadTimetables", "Clerk")" class="nav-link @((ViewContext.RouteData.Values["action"]?.ToString() == "UploadTimetables") ? "active" : "")">
+                        <i class="bi bi-calendar2-check me-2"></i> Upload / Generate Timetables
+                    </a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="@Url.Action("GenerateFeeChallans", "Clerk")" class="nav-link @((ViewContext.RouteData.Values["action"]?.ToString() == "GenerateFeeChallans") ? "active" : "")">
+                        <i class="bi bi-cash-stack me-2"></i> Generate Fee Challans
+                    </a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="@Url.Action("RecordData", "Clerk")" class="nav-link @((ViewContext.RouteData.Values["action"]?.ToString() == "RecordData") ? "active" : "")">
+                        <i class="bi bi-clipboard-data me-2"></i> Record Attendance & Data
+                    </a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="@Url.Action("AddAdmissionForm", "Clerk")" class="nav-link @((ViewContext.RouteData.Values["action"]?.ToString() == "AddAdmissionForm") ? "active" : "")">
+                        <i class="bi bi-file-earmark-person me-2"></i> Add Admission Form
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="flex-grow-1 d-flex flex-column vh-100">
+            <header class="custom-header">
+                <div>
+                    <span>@greetingMessage, <strong>@userName</strong></span>
+                </div>
+                <div>
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </button>
+                    </form>
+                </div>
+            </header>
+
+            <main class="flex-grow-1 overflow-auto">
+                @RenderBody()
+            </main>
+
+            <footer class="custom-footer">
+                <small>&copy; 2025 - Created By HBH_Experts</small>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

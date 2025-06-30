@@ -1,0 +1,233 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SMS
+build_property.RootNamespace = SMS
+build_property.ProjectDir = C:\Users\hasna\source\repos\SMS\SMS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\hasna\source\repos\SMS\SMS
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/AddClassSubject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ2xhc3NTdWJqZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/AddNewStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTmV3U3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/AddReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/AddTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkVGVhY2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/AdmissionSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaXNzaW9uU3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/AllStudents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWxsU3R1ZGVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/ApproveTimetables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXBwcm92ZVRpbWV0YWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/AssignRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXNzaWduUm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/BackupSecurity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmFja3VwU2VjdXJpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/CreateEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRXZlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/EditEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEV2ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/EditReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/EditStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFN0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/Events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/ManageClasses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlQ2xhc3Nlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/ManageUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/StudentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3R1ZGVudERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/SystemHealth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3lzdGVtSGVhbHRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/TeacherDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGVhY2hlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/Teachers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGVhY2hlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/ViewFeeStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0ZlZVN0YXR1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Admin/ViewReports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1JlcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/AddAdmissionForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcQWRkQWRtaXNzaW9uRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/AttendanceDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcQXR0ZW5kYW5jZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/FeeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcRmVlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/GenerateFeeChallans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcR2VuZXJhdGVGZWVDaGFsbGFucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/RecordData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcUmVjb3JkRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/UploadExamDateSheets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcVXBsb2FkRXhhbURhdGVTaGVldHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/UploadSyllabus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcVXBsb2FkU3lsbGFidXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Clerk/UploadTimetables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xlcmtcVXBsb2FkVGltZXRhYmxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Shared/_ClerkLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DbGVya0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Shared/_StudentLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHVkZW50TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Student/AttendanceDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxBdHRlbmRhbmNlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Student/Chatbot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDaGF0Ym90LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Student/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Student/DownloadMaterials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEb3dubG9hZE1hdGVyaWFscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Student/FeeStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxGZWVTdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Student/SubmitAssignments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTdWJtaXRBc3NpZ25tZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Student/ViewResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxWaWV3UmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Student/ViewTimetable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxWaWV3VGltZXRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasna/source/repos/SMS/SMS/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-brwfv4t8xm

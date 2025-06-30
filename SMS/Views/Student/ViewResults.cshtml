@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewBag.Title = "View Exam Results";
+}
+
+<div class="container my-5">
+    <div class="card shadow p-4">
+        <h2 class="mb-4 text-info"><i class="bi bi-file-earmark-text-fill me-2"></i>Your Exam Results</h2>
+
+        <p>Review your latest exam scores and overall grades.</p>
+
+        <table class="table table-striped table-bordered align-middle mt-3">
+            <thead class="table-primary">
+                <tr>
+                    <th>Subject</th>
+                    <th>Obtained Marks</th>
+                    <th>Total Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Mathematics</td><td>88</td><td>100</td><td>A</td></tr>
+                <tr><td>Physics</td><td>79</td><td>100</td><td>B+</td></tr>
+                <tr><td>Chemistry</td><td>92</td><td>100</td><td>A+</td></tr>
+                <tr><td>English</td><td>85</td><td>100</td><td>A</td></tr>
+                <tr><td>Computer Science</td><td>95</td><td>100</td><td>A+</td></tr>
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-end mt-4">
+            <a href="/Student/Dashboard" class="btn btn-outline-info">
+                <i class="bi bi-arrow-left-circle me-1"></i> Back to Dashboard
+            </a>
+        </div>
+    </div>
+</div>

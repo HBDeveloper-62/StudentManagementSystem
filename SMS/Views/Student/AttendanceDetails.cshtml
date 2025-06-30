@@ -1,0 +1,32 @@
+﻿@model SMS.Models.Admission
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewBag.Title = "Attendance Details";
+    var status = ViewBag.Status as string;
+    var dates = ViewBag.Dates as List<string>;
+}
+
+<div class="container mt-4">
+    <h3>@status Dates for @Model.FullName</h3>
+
+    <div class="card p-3 mt-3">
+        <h5>🎓 Student Info</h5>
+        <p><strong>Full Name:</strong> @Model.FullName</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Father's Name:</strong> @Model.FatherName</p>
+        <p><strong>Class:</strong> @Model.Class</p>
+        <p><strong>Address:</strong> @Model.Address</p>
+    </div>
+
+    <div class="card p-3 mt-3">
+        <h5>@status Dates</h5>
+        <ul>
+            @foreach (var date in dates)
+            {
+                <li>@date</li>
+            }
+        </ul>
+    </div>
+
+    <a href="/Student/Dashboard" class="btn btn-primary mt-3">⬅ Back to Dashboard</a>
+</div>

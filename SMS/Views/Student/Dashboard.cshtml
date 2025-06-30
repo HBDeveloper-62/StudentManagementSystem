@@ -1,0 +1,81 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewBag.Title = "Student Dashboard";
+    var name = ViewBag.Name ?? "Student";
+
+    int present = TempData["AttendancePresent"] != null ? (int)TempData["AttendancePresent"] : 75;
+    int absent = TempData["AttendanceAbsent"] != null ? (int)TempData["AttendanceAbsent"] : 25;
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Welcome, @name 👋</h2>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card p-3 shadow">
+                <h5>📊 Attendance</h5>
+                <canvas id="attendanceChart" style="cursor:pointer;"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-3 shadow">
+                <h5>💰 Fee Status</h5>
+                <p>Paid: ₹10,000 / ₹15,000</p>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 66%">66%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card p-4 shadow">
+        <h4>📚 Quick Access</h4>
+        <div class="row mt-3">
+            <div class="col-md-4 mb-3">
+                <a href="/Student/ViewTimetable" class="btn btn-outline-primary w-100">📅 View Timetable</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="/Student/ViewResults" class="btn btn-outline-info w-100">🎓 View Exam Results</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="/Student/DownloadMaterials" class="btn btn-outline-secondary w-100">📥 Download Syllabus/Notes</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="/Student/FeeStatus" class="btn btn-outline-warning w-100">💳 Pay Fee / Fee Status</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="/Student/Chatbot" class="btn btn-outline-dark w-100">🤖 Chatbot Help</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="/Student/SubmitAssignments" class="btn btn-outline-success w-100">📝 Submit Assignments</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('attendanceChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Present', 'Absent'],
+                datasets: [{
+                    data: [@present, @absent],
+                    backgroundColor: ['#28a745', '#dc3545']
+                }]
+            },
+            options: {
+                onClick: function (evt, elements) {
+                    if (elements.length > 0) {
+                        const clickedIndex = elements[0].index;
+                        const status = this.data.labels[clickedIndex]; // "Present" or "Absent"
+                        window.location.href = `/Student/AttendanceDetails?status=${status}`;
+                    }
+                }
+            }
+        });
+    </script>
+}

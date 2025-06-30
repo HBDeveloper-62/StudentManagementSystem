@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Teacher Details";
+    var status = ViewBag.Status as string;
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Teacher Details - @status</h2>
+    <hr />
+
+    <!-- Dummy table for now -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Teacher Name</th>
+                <th>Subject</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dummy Data - Replace with dynamic DB data later -->
+            @for (int i = 1; i <= 4; i++)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>Teacher @i</td>
+                    <td>Subject @i</td>
+                    <td>teacher@demo.com</td>
+                    <td>0300-00000@i</td>
+                    <td>@status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

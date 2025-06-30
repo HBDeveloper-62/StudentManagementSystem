@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Clerk Dashboard";
+    Layout = "~/Views/Shared/_ClerkLayout.cshtml";
+}
+
+<div class="container py-4">
+    <h2 class="mb-4">👨‍💼 Clerk Dashboard</h2>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            @TempData["Message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <a asp-action="UploadSyllabus" class="btn btn-primary w-100 btn-blue-sky">
+                📚 Upload Syllabus
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a asp-action="UploadExamDateSheets" class="btn btn-primary w-100 btn-blue-sky">
+                📝 Upload Exam Date Sheets
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a asp-action="UploadTimetables" class="btn btn-primary w-100 btn-blue-sky">
+                📅 Upload / Generate Timetables
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a asp-action="GenerateFeeChallans" class="btn btn-primary w-100 btn-blue-sky">
+                💵 Generate Fee Challans
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a asp-action="RecordData" class="btn btn-primary w-100 btn-blue-sky">
+                📊 Record Attendance & Data
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a asp-action="AddAdmissionForm" class="btn btn-primary w-100 btn-blue-sky">
+                🧾 Add Admission Form
+            </a>
+        </div>
+    </div>
+</div>

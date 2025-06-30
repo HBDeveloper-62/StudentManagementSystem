@@ -1,0 +1,351 @@
+﻿@{
+    var currentHour = DateTime.Now.Hour;
+    string greetingMessage = currentHour switch
+    {
+        >= 5 and < 12 => "🌞 Good Morning",
+        >= 12 and < 17 => "☀️ Good Afternoon",
+        >= 17 and < 21 => "🌙 Good Evening",
+        _ => "🌃 Good Night"
+    };
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SMS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SMS.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --primary-dark: #5649c0;
+            --secondary: #00cec9;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --sidebar-width: 280px;
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0f0f1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Glass Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: var(--sidebar-width);
+            height: calc(100vh - 60px);
+            background: rgba(15, 15, 30, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-right: 1px solid var(--glass-border);
+            padding: 30px 0;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sidebar-header {
+            padding: 0 25px 25px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+            .sidebar-header h3 {
+                margin: 0;
+                font-weight: 700;
+                font-size: 1.4rem;
+                color: white;
+                display: flex;
+                align-items: center;
+            }
+
+            .sidebar-header i {
+                margin-right: 12px;
+                font-size: 1.6rem;
+            }
+
+        .sidebar-menu {
+            padding: 15px 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 14px 25px;
+            margin: 5px 0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .menu-item:hover,
+            .menu-item.active {
+                color: white;
+                background: var(--glass);
+            }
+
+                .menu-item:hover::before,
+                .menu-item.active::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 4px;
+                    background: var(--primary);
+                }
+
+            .menu-item i {
+                margin-right: 12px;
+                font-size: 1.1rem;
+                width: 24px;
+                text-align: center;
+            }
+
+            .menu-item span {
+                font-weight: 500;
+            }
+
+        /* Main Content */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 30px;
+            min-height: calc(100vh - 120px);
+            transition: all 0.3s ease;
+        }
+
+        /* Header */
+        .custom-header {
+            height: 60px;
+            background: rgba(15, 15, 30, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            position: fixed;
+            width: 100%;
+            z-index: 1100;
+        }
+
+            .custom-header span {
+                font-size: 20px;
+                color: white;
+            }
+
+        /* Footer */
+        .custom-footer {
+            height: 60px;
+            background: rgba(15, 15, 30, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid var(--glass-border);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: var(--sidebar-width);
+            position: fixed;
+            bottom: 0;
+            width: calc(100% - var(--sidebar-width));
+        }
+
+        /* Responsive */
+        @@media (max-width: 992px) {
+            .sidebar
+
+        {
+            transform: translateX(-100%);
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .main-content {
+            margin-left: 0;
+            padding: 20px;
+        }
+
+        .custom-footer {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .sidebar-toggle {
+            display: block !important;
+        }
+
+        }
+
+        .sidebar-toggle {
+            display: none;
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1200;
+        }
+
+            .sidebar-toggle:hover {
+                background: var(--primary-dark);
+                transform: rotate(90deg);
+            }
+
+        /* Buttons */
+        .new-admission-btn {
+            background-color: var(--primary);
+            border-radius: 5px;
+            color: white !important;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+            .new-admission-btn:hover {
+                background-color: var(--primary-dark);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle d-lg-none">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg custom-header px-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Center Greeting -->
+            <div class="mx-auto">
+                <span class="fw-bold">@greetingMessage - Welcome to Admin Dashboard</span>
+            </div>
+
+            @if (Context.Session.GetString("UserName") != null)
+            {
+                <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-danger btn-sm">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </form>
+            }
+        </div>
+    </nav>
+
+    <!-- Glass Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3><i class="fas fa-user-shield"></i> Admin Panel</h3>
+        </div>
+        <div class="sidebar-menu">
+           @*  <a href="@Url.Action("Index", "Admin")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a> *@
+            <a href="@Url.Action("AddNewStudent", "Admin")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "AddNewStudent" ? "active" : "")">
+                <i class="fas fa-user-plus"></i>
+                <span>Add Student</span>
+            </a>
+            <a href="@Url.Action("AllStudents", "Admin")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "AllStudents" ? "active" : "")">
+                <i class="fas fa-users"></i>
+                <span>All Students</span>
+            </a>
+            <a href="@Url.Action("Teachers", "Admin")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Teachers" ? "active" : "")">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Teachers</span>
+            </a>
+            <a href="@Url.Action("Events", "Admin")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Events" ? "active" : "")">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Events</span>
+            </a>
+            <a href="@Url.Action("ViewReports", "Admin")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "ViewReports" ? "active" : "")">
+                <i class="fas fa-chart-pie"></i>
+                <span>Reports</span>
+            </a>
+            <a href="@Url.Action("BackupSecurity", "Admin")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "BackupSecurity" ? "active" : "")">
+                <i class="fas fa-shield-alt"></i>
+                <span>Security</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <small>&copy; 2025 - Created By HBH_Experts</small>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Sidebar toggle for mobile
+        document.querySelector('.sidebar-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        // Make all charts clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('canvas').forEach(chart => {
+                chart.style.cursor = 'pointer';
+                chart.addEventListener('click', function() {
+                    const chartId = this.id;
+                    let url = '';
+
+                    // Determine which page to open based on chart ID
+                    switch(chartId) {
+                        case 'attendanceChart':
+                            url = '/Admin/AttendanceDetails';
+                            break;
+                        case 'performanceChart':
+                            url = '/Admin/PerformanceDetails';
+                            break;
+                        case 'feeChart':
+                            url = '/Admin/FeeDetails';
+                            break;
+                        case 'teacherChart':
+                            url = '/Admin/TeacherDetails';
+                            break;
+                        default:
+                            url = '/Admin/Dashboard';
+                    }
+
+                    window.location.href = url;
+                });
+            });
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

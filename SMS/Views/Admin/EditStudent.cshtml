@@ -1,0 +1,66 @@
+﻿@model SMS.Models.Admission  
+@{  
+    var isDelete = ViewBag.IsDelete != null && (bool)ViewBag.IsDelete;  
+    ViewData["Title"] = isDelete ? "Delete Student" : "Edit Student";  
+}  
+
+<div class="container mt-5">  
+    <h2 class="mb-4 text-center">@ViewData["Title"]</h2>  
+
+    <form asp-action="@(isDelete ? "DeleteConfirmed" : "Edit")" method="post" class="needs-validation" novalidate>  
+        <input type="hidden" asp-for="StudentID" />  
+
+        <div class="mb-3">  
+            <label asp-for="FullName" class="form-label">Full Name</label>  
+            <input asp-for="FullName" class="form-control" readonly="@isDelete" />  
+            <span asp-validation-for="FullName" class="text-danger"></span>  
+        </div>  
+
+        <div class="mb-3">  
+            <label asp-for="FatherName" class="form-label">Father Name</label>  
+            <input asp-for="FatherName" class="form-control" readonly="@isDelete" />  
+            <span asp-validation-for="FatherName" class="text-danger"></span>  
+        </div>  
+
+        <div class="mb-3">  
+            <label asp-for="Class" class="form-label">Class</label>  
+            <input asp-for="Class" class="form-control" readonly="@isDelete" />  
+            <span asp-validation-for="Class" class="text-danger"></span>  
+        </div>  
+
+        <div class="mb-3">  
+            <label asp-for="Email" class="form-label">Email</label>  
+            <input asp-for="Email" class="form-control" type="email" readonly="@isDelete" />  
+            <span asp-validation-for="Email" class="text-danger"></span>  
+        </div>  
+
+        <div class="mb-3">  
+            <label asp-for="Contact" class="form-label">Contact</label>  
+            <input asp-for="Contact" class="form-control" readonly="@isDelete" />  
+            <span asp-validation-for="Contact" class="text-danger"></span>  
+        </div>  
+
+        <div class="mb-3">  
+            <label asp-for="AdmissionDate" class="form-label">Admission Date</label>  
+            <input asp-for="AdmissionDate" class="form-control" type="date" readonly="@isDelete" />  
+            <span asp-validation-for="AdmissionDate" class="text-danger"></span>  
+        </div>  
+
+        <div class="d-flex">  
+            @if (isDelete)  
+            {  
+                <button type="submit" class="btn btn-danger">Delete</button>  
+                <a asp-action="AllStudents" class="btn btn-secondary ms-2">Cancel</a>  
+            }  
+            else  
+            {  
+                <button type="submit" class="btn btn-primary">Update</button>  
+                <a asp-action="AllStudents" class="btn btn-secondary ms-2">Cancel</a>  
+            }  
+        </div>  
+    </form>  
+</div>  
+
+@section Scripts {  
+    <partial name="_ValidationScriptsPartial" />  
+}
